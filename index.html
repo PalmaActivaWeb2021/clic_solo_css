@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            /* Sistema clic */
+            #activar {
+                display: none;
+            }
+            .desplegable {
+                display: none;
+            }
+            #activar:checked ~ .desplegable {
+                display: block;
+            }
+            /* Fin sistema clic */
+        </style>
+    </head>
+    <body>
+        <!-- Menu desplegable clic - Smartphone/iPad -->
+        <input type="checkbox" id="activar" />
+        <label for="activar">
+            <img src="./menu.svg" width="28px" alt="" />
+        </label>
+        <section class="desplegable">
+            <ul>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+            </ul>
+        </section>
+        <!-- Fin del menu clic -->
+
+    </body>
+</html>
