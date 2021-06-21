@@ -1,0 +1,100 @@
+/* Normalize */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    height: 100vh;
+}
+
+/* FORMATO */
+
+
+/* Sistema clic */
+/* Elimina el cuadrado del checkbox */
+#activar {
+    display: none;
+}
+
+
+.desplegable {
+    transform: translateX(-100vw);
+    display: grid;
+    
+    background-color: rgb(193, 193, 193);
+    height: calc(100vh - 48px);
+    padding: 3rem;
+    font-size: 2rem;
+    
+    grid-template-rows: repeat(auto-fit, 1fr);
+    justify-items: center;
+}
+
+
+#activar:checked ~ .desplegable {
+    transition: 0.3s;
+    transform: translateX(0vw);
+}
+/* Fin sistema clic */
+
+
+
+/* SWITCH */
+/* *************** */
+
+.switch{
+    position: relative;
+    width: 60px;
+    height: 35px;
+    display: inline-block;
+}
+
+.switch input{
+    display: none;
+}
+
+.slider{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+.slider:before{
+    content:"";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 5px;
+    bottom: 5px;
+    background-color: rgb(112, 103, 218);
+    transition: 0.4s;
+}
+
+input:checked + .slider{
+    background-color: red;
+}
+
+input:checked + .slider:before{
+    transform: translateX(26px);
+}
+
+/* ROUND */
+
+.round{
+    border-radius: 50px;
+}
+
+.round:before{
+    border-radius: 50%;
+}
