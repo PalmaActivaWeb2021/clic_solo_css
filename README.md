@@ -1,1 +1,1 @@
-# clic_sin_JS
+# clic / Switch SIN JS
